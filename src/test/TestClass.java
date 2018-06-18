@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 public class TestClass {
@@ -13,6 +14,6 @@ public class TestClass {
 
     @Test
     public void classTest(){
-        System.out.println(clazz.getCanonicalName());
+        Assert.assertEquals(clazz.getCanonicalName(), "java.lang.String", "Error: class is not String.");
     }
 }
